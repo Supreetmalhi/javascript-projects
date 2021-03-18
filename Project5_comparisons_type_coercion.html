@@ -1,0 +1,39 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      function logicalOperators() { //function to execute logical operators
+
+        /* typeof operator */
+        var x = 5;
+        document.getElementById("typeofOperator").innerHTML = "Type of " + x + " is " + typeof(x);
+
+        /* == and === */
+        var y = '5';
+        document.getElementById('doubleEquals').innerHTML = x + ' == ' + y + ": " + (x==y);
+        document.getElementById('tripleEquals').innerHTML = x + ' === ' + y + ": " + (x===y);
+
+        /* > and < */
+        var z = 10;
+        document.getElementById('greaterThan').innerHTML = x + " > " + z + ": " + (x>z);
+        document.getElementById('lesserThan').innerHTML = x + " < " + z + ": " + (x<z);
+
+        /* &&, || and ! */
+        var a = true;
+        var b = false;
+        document.getElementById('logicalAnd').innerHTML = a + ' && ' + b + ": " + (a&&b);
+        document.getElementById('logicalOr').innerHTML = a + ' || ' + b + ": " + (a||b);
+        document.getElementById('logicalNot').innerHTML = '!' + a + ": " + (!a);
+      }
+    </script>
+    <button onclick="logicalOperators()">Execute Logical Operators</button>
+    <p id="typeofOperator"></p>
+    <p id="doubleEquals"></p>
+    <p id="tripleEquals"></p>
+    <p id="greaterThan"></p>
+    <p id="lesserThan"></p>
+    <p id="logicalAnd"></p>
+    <p id="logicalOr"></p>
+    <p id="logicalNot"></p>
+  </body>
+</html>
