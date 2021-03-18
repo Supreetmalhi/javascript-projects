@@ -1,0 +1,37 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      function rand() { //get random integer from 0 - 100
+        return Math.floor(Math.random()*100);
+      }
+
+      function calulate() {
+        /* get 2 numbers randomly */
+        var x = rand();
+        var y = rand();
+
+        /* +, -, *, % */
+        document.getElementById("add").innerHTML = x + " + " + y + " = " + (x+y);
+        document.getElementById("sub").innerHTML = x + " - " + y + " = " + (x-y);
+        document.getElementById("mul").innerHTML = x + " * " + y + " = " + (x*y);
+        document.getElementById("mod").innerHTML = x + " % " + y + " = " + (x%y);
+
+        /* increment and decrement operations */
+        var z = x;
+        x++;
+        document.getElementById("inc").innerHTML = z + "++ " + " = " + x;
+        x = z;
+        x--;
+        document.getElementById("dec").innerHTML = z + "-- " + " = " + x;
+      }
+    </script>
+    <button onclick="calulate()">Calculate</button>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mul"></p>
+    <p id="mod"></p>
+    <p id="inc"></p>
+    <p id="dec"></p>
+  </body>
+</html>
