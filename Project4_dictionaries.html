@@ -1,0 +1,24 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      function myDict() { // function to output a key-value pair
+        var marks = {
+          name: 'abc',
+          subject: 'JavaScript',
+          grade: 'A'
+        };
+        delete marks.grade; // delete a key
+
+        /* output the data */
+        document.getElementById('name').innerHTML = 'Name: ' + marks.name;
+        document.getElementById('subject').innerHTML = 'Subject: ' + marks.subject;
+        document.getElementById('grade').innerHTML = 'Grade: ' + marks.grade;
+      }
+    </script>
+    <button onclick="myDict()">Get Dictionary</button>
+    <p id="name"></p>
+    <p id="subject"></p>
+    <p id="grade"></p>
+  </body>
+</html>
