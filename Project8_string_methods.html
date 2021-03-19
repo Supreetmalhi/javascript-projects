@@ -1,0 +1,32 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      function stringMethods() {
+        /* concat */
+        var x = "Java";
+        var y = "Script";
+        var z = x.concat(y);
+        document.getElementById("concat").innerHTML = "concating " + x + " and " + y + ": " +z;
+
+        /* slice */
+        z = z.slice(0, 5);
+        document.getElementById("slice").innerHTML = "after slicing: " + z;
+
+        /* toString() */
+        var a = 5;
+        document.getElementById("toString").innerHTML = "converting number to string: " + a.toString();
+        
+        /* toPrecision() */
+        var m = 123.456789;
+        var n = m.toPrecision(2);
+        document.getElementById("toPrecision").innerHTML = m + " with 2 precision: " + n;
+      }
+    </script>
+    <button onclick="stringMethods()">Use string Methods</button>
+    <p id="concat"></p>
+    <p id="slice"></p>
+    <p id="toString"></p>
+    <p id="toPrecision"></p>
+  </body>
+</html>
