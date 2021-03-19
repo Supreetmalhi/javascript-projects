@@ -1,0 +1,27 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      function marks(firstName, lastName, grade) { // function to store marks
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.grade = grade;
+        function fullName() {
+          return firstName + " " + lastName;
+        }
+      }
+
+      /* marks of 2 different student */
+      var marks1 = new marks('fn1', 'ln1', 10);
+      var marks2 = new marks('fn2', 'ln2', 9);
+      
+      function getResult() {
+        /* winner based on marks, not taking clashes in account */
+        var winner = ((marks1.grade > marks2.grade) ? marks1: marks2);
+        document.getElementById('result').innerHTML = winner.firstName + ' is the winner and was graded ' + winner.grade;
+      }
+    </script>
+    <button onclick="getResult()">Get Result</button>
+    <p id="result"></p>
+  </body>
+</html>
