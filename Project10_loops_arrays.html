@@ -1,0 +1,44 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      /* get sum of all the integers in the array */
+      function sumUsingForLoop(arr) {
+        let sum = 0;
+        for(let i=0; i<10; i++) {
+          sum += arr[i];
+        }
+        document.getElementById('sum').innerHTML = 'Sum: ' + sum;
+      }
+
+      /* get max integer among all the array elemets */
+      function maxUsingWhileLoop(arr) {
+        let j=9;
+        max = arr[9];
+        while(j-->0) {
+          if(arr[j]>max)
+            max = arr[j];
+        }
+        document.getElementById('max').innerHTML = 'Max: ' + max;
+      }
+
+      /* initialize array with 10 random integers and get sum and max among them */
+      function initializeArr() {
+        let arr = [];
+        let str = "Numbers: ";
+        for(let i=0; i<10; i++) {
+          let randInt = Math.floor(Math.random()*100)
+          arr.push(randInt);
+          str += randInt.toString() + " ";
+        }
+        document.getElementById('arr').innerHTML = str;
+        sumUsingForLoop(arr);
+        maxUsingWhileLoop(arr);
+      }
+    </script>
+    <button onclick="initializeArr()">Randomize Numbers</button>
+    <p id="arr"></p>
+    <p id="sum"></p>
+    <p id="max"></p>
+  </body>
+</html>
