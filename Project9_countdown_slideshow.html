@@ -1,0 +1,31 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      /* function to create countdown */
+      function countdown(){
+        var seconds = document.getElementById('seconds').value;
+        var timer = document.getElementById('timer');
+        function tick() {
+          /* loop till 0 seconds remaining */
+          if(seconds==0) {
+            timer.innerHTML = "Time's up!";
+            alert("Time's up!");
+          } else {
+            setTimeout(tick, 1000);
+            timer.innerHTML = seconds;
+            seconds--;
+          }
+        }
+        tick();
+      }
+    </script>
+    <p>How many seconds would you like to set your alarm for?</p>
+    <input id="seconds" value="" />
+    <button onclick="countdown()">Click here to start countdown!</button>
+    <div id="timer" 
+      style="height: 100%; width: 100%; 
+        font-size: 50px; font-weight: bold; text-align: center; vertical-align: middle;">
+    </div>
+  </body>
+</html>
